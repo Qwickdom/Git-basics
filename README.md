@@ -7,35 +7,43 @@
 
  ## Basic Commands
 
- | Commands                    | Description                                                   |
- | --------------------------- | ------------------------------------------------------------- |
- | `git add [file.txt]`        | Add a file to the _Staging_ area                              |
- | `git add -A`                | Add all new and changed files to the staging area             |
+ | Commands                    | Description                                                        |
+ | --------------------------- | ------------------------------------------------------------------ |
+ | `git add [file.txt]`        | Add a file to the _Staging_ area                                   |
+ | `git add -A`                | Add all new and changed files to the staging area                  |
  | `git clone https://github.com/[user]/[repository].git` | Create a local copy of a remote repository |
- | `git commit -m "message"`   | Commit changes                                                |
- | `git config --global user.email your@email.com`        | Configure an email                 |
- | `git config --global user.name [Name]`                 | Configure a name                   |
- | `git config --list`         | List the configurations                                       |
- | `git init`                  | Initialize a local Git repository                             |
- | `git log`                   | View changes history                                          |
- | `git pull`                  | Update local repository to the newest commit                  |
- | `git push`                  | Push changes to remote repository (remembered branch)         |
- | `git rm -r [file-name.txt]` | Remove a file (or folder)                                     |
- | `git rm --cached [file/s]`  | Removes the files from the _Staging_ area and the next commit |
- | `git rm --force [file/s]`   | Delete files in Git and locally. We can recover them          |
- | `git show`                  | Show latest changes                                           |
- | `git status`                | Check status                                                  |
+ | `git commit -m "message"`   | Commit changes                                                     |
+ | `git config --global user.email "your@email.com"`      | Configure an email                      |
+ | `git config --global user.name "Name"`                 | Configure a name                        |
+ | `git config --global --replace-all user.name "Name"`   | Replace name configured                 |
+ | `git config --global --unset-all user.name`            | Delete all configs                      |
+ | `git config --list`         | List the configurations                                            |
+ | `git config --list --show-origin`                      | Show configurations and their paths     |
+ | `git fetch`                 | Fetch updates from the remote server and store in local repository |
+ | `git init`                  | Initialize a local Git repository                                  |
+ | `git pull`                  | Update local repository to the newest commit                       |
+ | `git push`                  | Push changes to remote repository (remembered branch)              |
+ | `git rm -r [file-name.txt]` | Remove a file (or folder)                                          |
+ | `git rm --cached [file/s]`  | Removes the files from the _Staging_ area and the next commit      |
+ | `git rm --force [file/s]`   | Delete files in Git and locally. We can recover them               |
+ | `git show`                  | Show latest changes                                                |
+ | `git status`                | Check status                                                       |
 
  ## Inspection & Comparison
 
- | Commands            | Description                                |
- | ------------------- | ------------------------------------------ |
- | `git diff [source branch] [target branch]`   | Preview changes before merging                     |
- | `git log`           | View changes                               |
- | `git log --all --graph --decorate --oneline` | Shows the history of the repository in a graphical |
- | `git log --oneline` | View changes (briefly)                     |
- | `git log --stat`    | Shows the number of bytes added or deleted |
- | `git log --summary` | View changes (detailed)                    |
+ | Commands             | Description                                |
+ | -------------------- | ------------------------------------------ |
+ | `git diff [source branch] [target branch]` | Preview changes before merging |
+ | `git log`            | View changes history                       |
+ | `git log -p`         | Shows you what was changed in the content  |
+ | `git log --all`      | All changes                                |
+ | `git log --author="Name"`                  | Commits by author    |
+ | `git log --decorate` | Where head point is located                |
+ | `git log --graph`    | Shows the history of the repository in a graphical   |
+ | `git log --oneline`  | View changes (briefly)                     |
+ | `git log --stat`     | Shows the number of bytes added or deleted |
+ | `git log --summary`  | View changes (detailed)                    |
+ | `git shortlog`       | Indicates which commits a user has made    |
 
  ## Branching & Merging
 
